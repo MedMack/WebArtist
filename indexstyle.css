@@ -1,0 +1,95 @@
+.Firstmenuzone {
+	width: 70%;
+	height: 30px;
+	background-color:#CCC;
+	border-radius: 10px 10px 0px 0px;
+	padding-left: 20px;
+	margin: auto;
+	margin-top: 0px;  
+	padding-right: 20px;
+	padding-top: 5px;
+	text-align: center;
+	font-family: meta;
+	color: gray;
+	border-bottom: 1px solid white; 
+}
+
+.menuzone {
+	width: 70%;
+	height: 30px;
+	background-color:#CCC;
+	border-radius: 0px;
+	padding-left: 20px;
+	margin: auto;
+	margin-top: 0px;  
+	padding-right: 20px;
+	padding-top: 5px;
+	text-align: center;
+	font-family: meta;
+	color: gray;
+	border-bottom: 1px solid white; 
+}
+
+.Lastmenuzone {
+	width: 70%;
+	height: 30px;
+	background-color:#CCC;
+	border-radius: 0px 0px 10px 10px;
+	padding-left: 20px;
+	margin: auto;
+	margin-top: 0px;  
+	padding-right: 20px;
+	padding-top: 5px;
+	text-align: center;
+	font-family: meta;
+	color: gray;
+}
+
+.onlymenuzone {
+	width: 70%;
+	height: 30px;
+	background-color:#CCC;
+	border-radius: 10px 10px 10px 10px;
+	padding-left: 20px;
+	margin: auto;
+	margin-top: 0px;  
+	padding-right: 20px;
+	padding-top: 5px;
+	text-align: center;
+	font-family: meta;
+	color: gray;
+	margin-top: 30px;
+}
+
+.logo{
+	width:200px;
+	height:200px;
+	margin:auto;
+	vertical-align: auto;
+}
+
+.quote{
+	font-family:kalinga;
+	font-size:0.7rem;
+	color:gray;
+}
+
+#container{
+	margin-top:80px;
+	transition: all 1s ease-out;*/
+	z-index: 10;
+}
+
+.msg{
+	padding-top: 0px;
+	font-family:kalinga;
+	font-size:1rem;
+}
+
+#menu{
+	margin-top: 230px;
+	z-index: 1;
+}
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}

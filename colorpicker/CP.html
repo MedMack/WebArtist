@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Color Picker</title>
+ <meta content="text/html" charset="utf-8">
+ <script type="text/javascript" src="jquery.js"></script>
+ <script type="text/javascript" src="CPscript.js"></script>
+ <link rel="stylesheet" href="CPstyle.css" type="text/css" />
+ <link rel="stylesheet" type="text/css" href="../src/style/headers.css">
+  <link rel="stylesheet" type="text/css" href="../src/style/global.css">
+  <link rel="stylesheet" type="text/css" href="../src/style/switches.css">
+  <link rel="stylesheet" type="text/css" href="../src/style/tabs.css">
+  <script type="text/javascript" src="../global.js"></script>
+ <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('#demo').hide();
+    $('#picker').farbtastic('#color');
+	$('#picker').farbtastic('#color2');
+  });
+  </script>
+  <script language="javascript">
+  function pick(){
+  //colorpreview = getElementById("color");
+  //alert(document.color.value);
+  //alert("test");
+  document.getElementById('canvascolor').style.backgroundColor = document.getElementById('color').style.backgroundColor;
+  //alert(document.getElementById('color').value);
+  //document.getElementById('canvascolor').style.backgroundColor = document.color.value;
+  var colorname=document.getElementById('color').value;
+  document.getElementById("CValue").innerHTML="<p>Color : "+colorname+"</p>";
+  Cvar=colorname;
+  }
+ </script>
+</head>
+<body role="application" onload="pick()">
+  <div class="bgsection">
+    <form id="formulaire" name="fo">
+  <!--<input type="text" name="incolor" >-->
+  <input type="button" name="addcolor" onClick="AddCol2Pal(fo)" value="add">
+  <table border="0">
+    <tr>
+      <td><div id="z1" class="col"></td>
+      <td>
+      <div class="checker">
+      <label>
+      <input name="example" checked="" type="radio" onClick="assign()">
+      <span></span>
+      </label>
+      </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><div id="z2" class="col"></td>
+      <td>
+      <div class="checker">
+      <label>
+      <input name="example" checked="" type="radio" onClick="assign()">
+      <span></span>
+      </label>
+      </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><div id="z3" class="col"></td>
+      <td>
+      <div class="checker">
+      <label>
+      <input name="example" checked="" type="radio" onClick="assign()">
+      <span></span>
+      </label>
+      </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><div id="z4" class="col"></td>
+      <td>
+      <div class="checker">
+      <label>
+      <input name="example" checked="" type="radio" onClick="assign()">
+      <span></span>
+      </label>
+      </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><div id="z5" class="col"></td>
+      <td>
+      <div class="checker">
+      <label>
+      <input name="example" checked="" type="radio" onClick="assign()">
+      <span></span>
+      </label>
+      </div>
+      </td>
+    </tr>
+  </table>
+  </form>
+  </div>
+  <div id="fgsection" class="fgsection">
+  
+  <!--Firefox OS App Header-->
+<div id="header">
+<section role="region" class="skin-organic">
+<header>
+<a href="../menu.html"><span class="icon icon-back">back</span></a>
+<h1 align="center" >Color Picker</h1>
+</header>
+</section>
+</div>
+<div id="container" width="100%" border="0" align="center">
+<!--<div id="container" width="100%" height="100%" onClick="pick()">-->
+<div id="demo" style="color: red;">jQuery.js is missing</div>
+<div name="topmagin" style="margin-top:10px;">
+<div class="form-item">
+  <input type="text" id="color" name="color" value="#000000" onchange="pick()" style="display:none;"/>
+</div>
+</div>
+
+<div id="picker" onclick="pick()"></div>
+<div id="resultzone">
+  <canvas id="canvascolor" class="canv3">
+</div>
+<p id="CValue" style="color:black;z-index:10;"> Color : #000000 </p>
+<!-- Bottom menu -->
+<section role="region">
+    <!-- if your tabs are at the top, remove class="bottom" -->
+    <ul role="tablist" data-items="3" >
+      <li id="panel1" role="tab" >
+        <a class="" onClick="hidepalette()">Hide Palette</a>
+        
+      </li>
+      <li id="panel2" role="tab" >
+        <a class="" onClick="showpalette()">Use Color</a>
+        
+      </li>
+      <li id="panel3" role="tab" >
+        <a onClick="reload()">Refresh</a>
+        
+      </li>
+    </ul>
+  </section>
+</div>
+</div>
+</div>
+</body>
+</html>

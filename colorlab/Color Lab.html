@@ -1,0 +1,260 @@
+<!doctype HTML>
+<head>
+	<title>Colorado App</title>
+	<meta content="text/html" charset="utf-8">
+	<meta name="description" content="Colorado is a Firefox OS Application for web designers to help them with Hexa colors" />
+    <meta name="keywords" content="FirefoxOS, App, Boot2Gecko, B2G, HTML5, CSS3, JavaScript, JS, Colors, HTML Colors, Mozilla" />
+    <meta name="author" content="MedMack" />
+	<link rel="stylesheet" type="text/css" href="src/style/headers.css">
+	<link rel="stylesheet" type="text/css" href="src/style/global.css">
+	<link rel="stylesheet" type="text/css" href="src/style/switches.css">
+	<link rel="stylesheet" type="text/css" href="src/style/tabs.css">
+	<link rel="stylesheet" type="text/css" href="src/style/seekbars.css">
+</head>
+<script language="javascript">
+var dz="#";
+
+/*
+
+function updateBGColor(){
+	//l'affectation des valeurs du menu select au variables
+	var red1 = getSelectValue('BR1');
+	var red2 = getSelectValue('BR2');
+	var green1 = getSelectValue('BG1');
+	var green2 = getSelectValue('BG2');
+	var blue1 = getSelectValue('BB1');
+	var blue2 = getSelectValue('BB2');
+	//concatination du résultat
+	var BGcolor = dz+red1+red2+green1+green2+blue1+blue2;
+	var UpBGcolor = BGcolor.toUpperCase();
+	//document.getElementById('result').value =color1; affichage du résultat 
+	//mise à jour de la valeur hexa de la couleur choisie
+	document.getElementById("BGValue").innerHTML ="<p>Background : "+BGcolor+"</p> ";
+	//le changement du background avec la nouvelle couleur
+	document.getElementById("canvascolor").style.backgroundColor = BGcolor;
+	//testerFG();
+	testerBG();
+}
+function updateFGColor(){
+	//l'affectation des valeurs du menu select au variables
+	var red1 = getSelectValue('FR1');
+	var red2 = getSelectValue('FR2');
+	var green1 = getSelectValue('FG1');
+	var green2 = getSelectValue('FG2');
+	var blue1 = getSelectValue('FB1');
+	var blue2 = getSelectValue('FB2');
+	//concatination du résultat
+	var FGcolor = dz+red1+red2+green1+green2+blue1+blue2;
+	var UpFGcolor = FGcolor.toUpperCase();
+	//alert(UpFGcolor);
+	//le changement du background avec la nouvelle couleur
+	document.getElementById("FGValue").style.color = FGcolor;
+	BGcolor = document.getElementById('canvascolor').style.backgroundColor;
+	document.getElementById("BGValue").style.color = FGcolor;
+	//mise à jour de la valeur hexa de la couleur choisie
+	document.getElementById("FGValue").innerHTML="<p>Text Color : "+FGcolor+"</p>";
+
+	
+	//alert(color2);
+	//testerBG();
+	testerFG();
+}
+*/
+function testerBG(){
+	var C1 = document.getElementById('canvascolor').style.backgroundColor;
+	//tester si la couleur a un nom sinon afficher "Unknown color"
+	if (C1 == "rgb(0, 0, 0)") document.getElementById('BGcolorname').value = 'Black'
+	else if (C1 == "rgb(255, 255, 255)") document.getElementById('BGcolorname').value = 'White'
+	else document.getElementById('BGcolorname').value = 'Unknown Color';
+}
+function testerFG(){
+	var C2 = document.getElementById('FGValue').style.color;
+	//tester si la couleur a un nom sinon afficher "Unknown color"
+	if (C2 == "rgb(0, 0, 0)") document.getElementById('FGcolorname').value = 'Black'
+	else if (C2 == "rgb(255, 255, 255)") document.getElementById('FGcolorname').value = 'White'
+	else document.getElementById('FGcolorname').value = 'Unknown Color';
+}
+function showFG(){
+document.getElementById('bgbars').style.display = 'none';
+document.getElementById('fgbars').style.display = 'block';
+//document.getElementById('foregroundB').style.display = 'none';
+//document.getElementById('backgroundB').style.display = 'block';
+document.getElementById('bgswitch').checked=false;
+document.getElementById('fgswitch').checked=true;
+//document.bgswitch[0].checked=false;
+//document.fgswitch[0].checked=true;
+}
+function showBG(){
+document.getElementById('fgbars').style.display = 'none';
+document.getElementById('bgbars').style.display = 'block';
+//document.getElementById('backgroundB').style.display = 'none';
+//document.getElementById('foregroundB').style.display = 'block';
+document.getElementById('bgswitch').checked=true;
+document.getElementById('fgswitch').checked=false;
+//document.bgswitch[0].checked=true;
+//document.fgswitch[0].checked=false;
+}
+
+function reload(){
+window.location.reload();
+//configure the switcher
+document.getElementById('bgswitch').checked=true;
+document.getElementById('fgswitch').checked=false;
+}
+</script>
+
+<body role="application" onload="showBG()">
+<!--Firefox OS Sidebar-->
+
+<!--Firefox OS App Header-->
+<div id="header">
+<section role="region" class="skin-organic">
+<header>
+<!--<a href="#"><span class="icon icon-back">back</span></a>-->
+<h1 align="center" >Color Lab</h1>
+</header>
+</section>
+</div>
+<a href="index.html"><input type="button" name="back" value="<< Back" class="Bk"><a/>
+<!--<input type="button" value="Reload Page" onClick="window.location.reload()">-->
+
+<!--tableau container qui contient les elements de la page-->
+<form name="f">
+	<table id="container" width="90%" border="0" align="center">
+	<tr><td>
+	<div id="bgbars" >	
+	<table width="80%" border="0" align="center">
+		<tr><th  id="t_title" height="50">Background</th></tr>
+		<tr>
+		<td  aligh="center">
+			<section role="region">
+			<div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+			<div>
+			<progress value="50" max="100"></progress>
+			<button>handler</button>
+			</div>
+			</div>
+			</section>
+			
+			<section role="region">
+			<div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+			<div>
+			<progress value="50" max="100"></progress>
+			<button>handler</button>
+			</div>
+			</div>
+			</section>
+			
+			<section role="region">
+			<div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+			<div>
+			<progress value="50" max="100"></progress>
+			<button>handler</button>
+			</div>
+			</div>
+			</section>
+		</td>
+		</tr>
+		</table>
+	</div>
+	<div id="fgbars" style="display:none;" >
+	<table width="80%" border="0" align="center">
+		<tr>
+		<th  id="t_title">Foreground</th>
+		</tr>
+		<tr>
+		<td >
+			<section role="region">
+			<div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+			<div>
+			<progress value="50" max="100"></progress>
+			<button>handler</button>
+			</div>
+			</div>
+			</section>
+			
+			<section role="region">
+			<div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+			<div>
+			<progress value="50" max="100"></progress>
+			<button>handler</button>
+			</div>
+			</div>
+			</section>
+			
+			<section role="region">
+			<div role="slider" aria-valuemin="0" aria-valuenow="80" aria-valuemax="100" aria-valuetext="slider description">
+			<div>
+			<progress value="50" max="100"></progress>
+			<button>handler</button>
+			</div>
+			</div>
+			</section>
+		</td>	
+		</tr>
+		</table>
+	</div>
+	</td></tr>
+	
+	
+	<tr><!--2ème ligne : aperçu-->
+	<td align="center">
+		<div id="resultzone">
+			<div id="canvascolor" class="canv2" style="background-color:black;">
+			<div id="values">
+			<p id="FGValue" style="color:#FFF;">Text Color : #FFFFFF</p>
+			<p id="BGValue" style="color:#FFF;">BG Color : #000000</p>
+			</div>
+			</div>
+			<script>
+			
+			</script>
+		</div>
+	</td>
+	<tr><!--3ème ligne : les bouttons-->
+	<td align="center">
+	<!--test des radios au lieu des boutons-->
+	<label>
+	<input type="checkbox" checked="" data-type="switch" id="bgswitch" onClick="showBG()">BG
+	<span></span>
+	</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	<label>
+	<input type="checkbox" data-type="switch" id="fgswitch" onclick="showFG()">FG
+	<span></span>
+	</label>
+	<!--boutons
+<button id="foregroundB" name="foreground" class="modern" type="button" onclick="showFG()">foreground</button>
+<button id="backgroundB" name="background" class="modern" type="button" onclick="showBG()" style="display:none;">background</button>
+	-->
+</td>
+</tr>
+</table>
+</form>
+<section role="region">
+    <!-- if your tabs are at the top, remove class="bottom" -->
+    <ul role="tablist" data-items="3" >
+      <li id="panel1" role="tab" aria-disabled="true">
+        <a class="">Save Code</a>
+        
+      </li>
+      <li id="panel2" role="tab" aria-disabled="true">
+        <a class="">Use Color</a>
+        
+      </li>
+      <li id="panel3" role="tab" >
+        <a onClick="reload()"class="">Refresh</a>
+        
+      </li>
+    </ul>
+  </section>
+<!--<div class="container">
+<section class="main">
+	<div class="switch demo3">
+		<input type="button">
+		<label><i></i></label>
+	</div>
+</section>
+</div>-->
+</body>
+
+</html>

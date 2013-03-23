@@ -1,0 +1,437 @@
+<!doctype HTML>
+<head>
+	<title>Hexa Generator</title>
+	<meta content="text/html" charset="utf-8">
+	<meta name="description" content="Colorado is a Firefox OS Application for web designers to help them with Hexa colors" />
+    <meta name="keywords" content="FirefoxOS, App, Boot2Gecko, B2G, HTML5, CSS3, JavaScript, JS, Colors, HTML Colors, Mozilla" />
+    <meta name="author" content="MedMack" />
+	<link rel="stylesheet" type="text/css" href="../src/style/headers.css">
+	<link rel="stylesheet" type="text/css" href="../src/style/global.css">
+	<link rel="stylesheet" type="text/css" href="../src/style/switches.css">
+	<link rel="stylesheet" type="text/css" href="../src/style/tabs.css">
+	<script type="text/javascript" src="hexagenscript.js"></script>
+	<script type="text/javascript" src="../global.js"></script>
+</head>
+
+
+<body role="application" onload="updateBGColor()" onload="updateFGColor()" onload="showBG()">
+<!--Firefox OS Sidebar-->
+
+<!--Firefox OS App Header-->
+<div class="bgsection">
+	<form id="formulaire" name="fo">
+	<input type="button" name="addcolor" onClick="AddCol2Pal(fo)" value="add">
+	<table border="0">
+		<tr>
+			<td><div id="z1" class="col"></td>
+			<td>
+			<div class="checker">
+			<label>
+			<input name="example" checked="" type="radio" onClick="assign()">
+			<span></span>
+			</label>
+			</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><div id="z2" class="col"></td>
+			<td>
+			<div class="checker">
+			<label>
+			<input name="example" checked="" type="radio" onClick="assign()">
+			<span></span>
+			</label>
+			</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><div id="z3" class="col"></td>
+			<td>
+			<div class="checker">
+			<label>
+			<input name="example" checked="" type="radio" onClick="assign()">
+			<span></span>
+			</label>
+			</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><div id="z4" class="col"></td>
+			<td>
+			<div class="checker">
+			<label>
+			<input name="example" checked="" type="radio" onClick="assign()">
+			<span></span>
+			</label>
+			</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><div id="z5" class="col"></td>
+			<td>
+			<div class="checker">
+			<label>
+			<input name="example" checked="" type="radio" onClick="assign()">
+			<span></span>
+			</label>
+			</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<div class="fgsection" id="fgsection">
+<div id="header">
+<section role="region" class="skin-dark">
+<header>
+<a href="../menu.html"><span class="icon icon-back">back</span></a>
+<h1 align="center" >Hexa Generator</h1>
+</header>
+</section>
+</div>
+<!--<a href="../menu.html"><input type="button" name="back" value="<< Back" class="Bk"><a/>-->
+
+<!--tableau container qui contient les elements de la page-->
+<form name="f">
+	<table id="container" width="100%" border="0" align="center">
+	<tr><!--1ere ligne : les tableaux selecteurs-->
+	<td align="center">
+		<div id="backgroundtable">
+		<table id="BGtab" border="0">
+		<tr>
+		<th colspan="3" id="t_title" height="50">Background</th>
+		</tr>
+		<th>Red</th>
+		<th>Green</th>
+		<th>Blue</th>
+		<tr>
+		<td>
+			<div id="Red">
+			<select id="BR1" onchange="updateBGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			</select>
+			
+			<select id="BR2" name="R2" onchange="updateBGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			</select>
+			</div>
+		</td>	
+		<td>
+			<div id="Green">
+			<select id="BG1" name="G1" onchange="updateBGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			</select>
+			
+			<select id="BG2" name="G2" onchange="updateBGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			</select>
+			</div>
+		</td>
+		<td>
+			<div id="Blue">
+			<select id="BB1" name="B1" onchange="updateBGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			</select>
+			
+			<select id="BB2" name="B2" onchange="updateBGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option value="F">F</option>
+			</select>
+			</div>
+		</td>
+		</tr>
+		<tr><td colspan="3" id="cname"><input id="BGcolorname" class="inpmac" type="text" value="Color name"></td></tr>
+		</table>
+		</div>
+		<div id="foregroundtable" style="display:none;">
+		<table border="0">
+		<tr>
+		<th colspan="3" id="t_title">Foreground</th>
+		</tr>
+		<th>Red</th>
+		<th>Green</th>
+		<th>Blue</th>
+		<tr>
+		<td>
+			<div id="Red">
+			<select id="FR1" onchange="updateFGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option selected value="F">F</option>
+			</select>
+			
+			<select id="FR2" name="R2" onchange="updateFGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option selected value="F">F</option>
+			</select>
+			</div>
+		</td>	
+		<td>
+			<div id="Green">
+			<select id="FG1" name="G1" onchange="updateFGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option selected value="F">F</option>
+			</select>
+			
+			<select id="FG2" name="G2" onchange="updateFGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option selected value="F">F</option>
+			</select>
+			</div>
+		</td>
+		<td>
+			<div id="Blue">
+			<select id="FB1" name="B1" onchange="updateFGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option selected value="F">F</option>
+			</select>
+			
+			<select id="FB2" name="B2" onchange="updateFGColor()">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+			<option value="D">D</option>
+			<option value="E">E</option>
+			<option selected value="F">F</option>
+			</select>
+			</div>
+		</td>
+		</tr>
+		<tr><td colspan="3" id="cname"><input id="FGcolorname" class="inpmac" type="text" value="White" style="align:center;"></td></tr>
+		</table>
+		</div>
+	</td>
+	<tr><!--2ème ligne : aperçu-->
+	<td align="center">
+		<div id="resultzone">
+			<div id="canvascolor" class="canv">
+			<div id="values">
+			<p id="FGValue" style="color:#FFF;">Text Color : #FFFFFF</p>
+			<p id="BGValue" style="color:#FFF;">BG Color : #000000</p>
+			</div>
+			</div>
+			<script>
+			
+			</script>
+		</div>
+	</td>
+	<tr><!--3ème ligne : les bouttons-->
+	<td align="center">
+	<!--test des radios au lieu des boutons-->
+	<label>
+	<input type="checkbox" checked="" data-type="switch" id="bgswitch" onClick="showBG()">BG
+	<span></span>
+	</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	<label>
+	<input type="checkbox" data-type="switch" id="fgswitch" onclick="showFG()">FG
+	<span></span>
+	</label>
+	<!--boutons
+<button id="foregroundB" name="foreground" class="modern" type="button" onclick="showFG()">foreground</button>
+<button id="backgroundB" name="background" class="modern" type="button" onclick="showBG()" style="display:none;">background</button>
+	-->
+</td>
+</tr>
+</table>
+</form>
+<section role="region">
+    <!-- if your tabs are at the top, remove class="bottom" -->
+    <ul role="tablist" data-items="3" >
+      <li id="panel1" role="tab">
+        <a class="" onClick="hidepalette()">Hide Palette</a>
+        
+      </li>
+      <li id="panel2" role="tab">
+        <a class="" onClick="showpalette(),getColor()">Use Color</a>
+        
+      </li>
+      <li id="panel3" role="tab" >
+        <a onClick="reload()"class="">Refresh</a>
+        
+      </li>
+    </ul>
+  </section>
+<!--<div class="container">
+<section class="main">
+	<div class="switch demo3">
+		<input type="button">
+		<label><i></i></label>
+	</div>
+</section>
+</div>-->
+</div>
+</body>
+
+</html>

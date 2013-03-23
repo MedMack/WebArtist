@@ -1,0 +1,22 @@
+{
+  "name": "Testzone",
+  "description": "...",
+  "launch_path": "/tester.html",
+  "developer": {
+    "name": "Mack",
+    "url": "https://github.com/MedMack"
+  },
+  "locales": {
+    "en-US": {
+      "name": "Tester",
+      "description": "test zone"
+    }
+  },
+  "default_locale": "en-US",
+  "icons": {
+    "60": "/icon60.png",
+    "120": "/icon120.png",
+    "128": "/icon128.png"
+  },
+  "orientation": "portrait-primary"
+}
