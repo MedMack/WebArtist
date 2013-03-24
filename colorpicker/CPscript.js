@@ -364,3 +364,7 @@ function showpalette(){
 function hidepalette(){
   document.getElementById('fgsection').className='fgsection';
 }
+
+function reload(){
+window.location.reload();
+}
