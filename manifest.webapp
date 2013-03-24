@@ -1,7 +1,7 @@
 {
   "name": "Web Artist",
   "description": "...",
-  "launch_path": "/index.html",
+  "launch_path": "/WebArtist/index.html",
   "developer": {
     "name": "Mack",
     "url": "https://github.com/MedMack"
