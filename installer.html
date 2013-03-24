@@ -5,7 +5,7 @@
 <title>Tunisian Market Place </title>
 <script type="text/javascript" language="javascript">
 function go(){
-var appUrl = location.substring(0, location.lastIndexOf('/')) + '/manifest.webapp';
+var appUrl = "http://medmack.github.com/WebArtist/manifest.webapp"
 var request = navigator.mozApps.install(appUrl);
 request.onsuccess = function() {
 console.log("installed !");
