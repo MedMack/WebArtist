@@ -1,7 +1,8 @@
 .Firstmenuzone {
 	width: 70%;
 	height: 30px;
-	background-color:#CCC;
+	background-image: 
+	-moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(252,252,252) 63%);
 	border-radius: 10px 10px 0px 0px;
 	padding-left: 20px;
 	margin: auto;
@@ -17,7 +18,8 @@
 .menuzone {
 	width: 70%;
 	height: 30px;
-	background-color:#CCC;
+	background-image: 
+	-moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(252,252,252) 63%);
 	border-radius: 0px;
 	padding-left: 20px;
 	margin: auto;
@@ -34,8 +36,10 @@
 	width: 70%;
 	height: 30px;
 	background-color:#CCC;
-	border-radius: 0px 0px 10px 10px;
+	background-image: 
+	-moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(252,252,252) 63%);
 	padding-left: 20px;
+	border-radius: 0px 0px 10px 10px;
 	margin: auto;
 	margin-top: 0px;  
 	padding-right: 20px;
@@ -48,7 +52,8 @@
 .onlymenuzone {
 	width: 70%;
 	height: 30px;
-	background-color:#CCC;
+	background-image: 
+	-moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(252,252,252) 63%);
 	border-radius: 10px 10px 10px 10px;
 	padding-left: 20px;
 	margin: auto;
@@ -87,9 +92,60 @@
 }
 
 #menu{
-	margin-top: 230px;
+	margin-top: auto;
 	z-index: 1;
 }
 
 a:link {text-decoration:none;}
 a:visited {text-decoration:none;}
+
+#starterbg{
+  width: 100%;
+  height: 100%;
+}
+
+#starter{
+	margin: 20px 20px auto;
+  border-radius: 20px;
+  min-width: 200px;
+  
+  min-height: 380px;
+  max-height: 500px;
+  background-image: 
+  -moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(252,252,252) 63%);
+  box-shadow: 0 5px 4px -2px #555;
+}
+
+#logoholder{
+	margin: 0px auto;
+	text-align: center;
+	z-index: 20;
+	height: 270px
+	
+}
+
+#logo {
+	margin-top: 30px;
+}
+
+#nameapp{
+	font-family: Throw My Hands Up in the Air;
+	color:black;
+}
+
+#startapp{
+	border-radius: 10px;
+	margin: 10px auto;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	background-image: 
+	-moz-linear-gradient(bottom, rgb(245,245,245) 0%, rgb(252,252,252) 63%);
+  box-shadow: 0 5px 4px -2px #555;
+}
+
+#startext{
+	font-family: meta;
+	color: #222;
+	padding-top: 7px;
+}
