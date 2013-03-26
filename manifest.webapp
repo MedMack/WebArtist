@@ -14,9 +14,9 @@
   },
   "default_locale": "en-US",
   "icons": {
-    "60": "/icon60.png",
-    "120": "/icon120.png",
-    "128": "/WebArtist/logo.PNG"
+    "60": "/WebArtist/logo60.png",
+    "120": "/WebArtist/logo120.png",
+    "128": "/WebArtist/logo128.png"
   },
   "orientation": "portrait-primary"
 }
